@@ -34,7 +34,7 @@ app.post("/shortit", async (request, response) => {
     } catch (err) {
         console.log(err.stack)
     }
-    response.render("shorten", { inputUrl, newUrl });
+    return response.render("shorten", { inputUrl, newUrl });
 })
 
 
