@@ -4,10 +4,10 @@ require("dotenv").config();
 ///*
 const pool = require("pg").Pool;
 const dbPool = new pool({
-    user: "postgres",
-    host: "127.0.0.1",
-    database: "shortit",
-    password: "986619",
+    user: "qtzgxwtg",
+    host: "tyke.db.elephantsql.com",
+    database: "qtzgxwtg",
+    password: "3TGqFfu27HMRimQI4Nb_V0qCoVnWAUl4",
     port: 5432,
 })
 //*/
