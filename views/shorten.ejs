@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
     <title>Shortened URL</title>
 </head>
 
 <body>
     <div class="cont">
-        <a href=<%=inputUrl%>><%=newUrl%></a>
+        <a id="myInput" href=<%=inputUrl%>><%=newUrl%></a>
+        <button onclick="myFunction()">copy url</button>
     </div>
+    <script>
+        function myFunction() {
+            var copyText = document.getElementById("myInput").innerText;
+            //copyText.select();
+            navigator.clipboard
+                .writeText(copyText)
+                .then(() => {
+                    alert("successfully copied!");
+                })
+                .catch(() => {
+                    alert("something went wrong!");
+                });
+        }
+    </script>
 </body>
 
 </html>
